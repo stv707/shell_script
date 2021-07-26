@@ -1,0 +1,22 @@
+#!/bin/bash
+#Author: Steven
+#Date: 27-July-2021
+#Usage: current time
+#Version: 1.0 
+#Changelog: 
+
+
+if [ $# -ne 1 ] 
+	 then 
+		 echo "USAGE: $0 <d: dubai | b: berlin | p: prague>" 
+		 exit 22
+	 fi 
+
+
+
+	 case $1 in
+		 'd') export TZ=Asia/Dubai && echo current td in Dubai is $(date) ;;
+		 'b') export TZ=Europe/Berlin && echo current td in Berlin is $(date) ;;
+		 'p') export TZ=Europe/Prague && echo current td in Prague is $(date) ;;
+ 	         '*') echo "wrong selection" && exit ;; 
+	 esac 

@@ -28,7 +28,7 @@ do
 		date
 		;; 
 	*)
-		echo "$OPTARG is not a valid option."
+		#echo "$OPTARG is not a valid option."
 		echo "$USAGE"
 		;;
 	esac

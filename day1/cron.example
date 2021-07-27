@@ -1,0 +1,19 @@
+## Cron Job 1 to run on Dubai TimeZone
+CRON_TZ="Asia/Dubai"
+16 2-8 * * * TZ="Asia/Dubai" /usr/local/bin/mytime_dubai.sh
+
+
+## Cron Job 2 to run on Berlin TimeZone
+CRON_TZ="Europe/Berlin"
+16 2-8 * * * TZ="Europe/Berlin" /usr/local/bin/mytime_berlin.sh
+
+
+## Cron Job 3 to run on last day of the Month on Prague TimeZone
+CRON_TZ="Europe/Prague"
+0 23 28-31 * * [ $(date -d +1day +%d) -eq 1 ] && TZ="Europe/Prague" /usr/local/bin/mytime_prague.sh
+
+
+
+
+CRON_TZ="Europe/Prague"
+0 23 1 * *  TZ="Europe/Prague" /usr/local/bin/mytime_prague.sh

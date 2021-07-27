@@ -15,13 +15,13 @@ while getopts :xy:z opt_char
 
 do
 	case $opt_char in
+	y)       
+		echo "running cal with option"
+		cal $OPTARG
+		;;
 	x)
 		echo "running cal"
 		cal 
-		;;
-	y)
-		echo "running cal with option"
-		cal $OPTARG
 		;;
 	z)	
 		echo "running date command"
@@ -29,6 +29,10 @@ do
 		;; 
 	*)
 		#echo "$OPTARG is not a valid option."
+		if [ -z $OPTARG ]
+		then
+			echo 'option y need arg' 
+		fi 
 		echo "$USAGE"
 		;;
 	esac

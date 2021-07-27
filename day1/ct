@@ -20,3 +20,4 @@ if [ $# -ne 1 ]
 		 'p') export TZ=Europe/Prague && echo current td in Prague is $(date) ;;
  	         '*') echo "wrong selection" && exit ;; 
 	 esac 
+#v2

@@ -15,3 +15,4 @@ fi
 
 touch /tmp/${USER}/file_$(date +%d_%H_%M)_${USER}_prague.txt
 echo "this task ran at $(date)" >> /tmp/${USER}/file_$(date +%d_%H_%M)_${USER}_prague.txt
+#v2

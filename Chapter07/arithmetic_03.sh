@@ -8,3 +8,6 @@ echo $total
 sum=$(($number_1 + $number_2))
 echo "sum is "$sum
 echo "Sum is $[ $number_1+$number_2 ]"
+
+
+echo  "mysum is $(expr $number_1 + $number_2)" 

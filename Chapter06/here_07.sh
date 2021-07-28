@@ -13,8 +13,14 @@ if [ $# -ge 3 ]
 then
 directory=$3
 fi
-ftp <<End_Of_Session
-open $hostname
+
+
+US=anonymous
+PA=anything 
+
+
+ftp -inv $hostname <<End_Of_Session
+user $US $PA
 cd $directory
 get $filename
 quit

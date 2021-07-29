@@ -9,7 +9,7 @@ then
 
 fi 
 
-podman run -d -it --name oracle-db-12c -p 8080:8080  -p 1521:1521 stv707/oradb:12slim
+podman run -d -it --rm --name oracle-db-12c -p 8080:8080  -p 1521:1521 stv707/oradb:12slim
 
 #install clienttool - sqlplus
 if [ ! -f /usr/bin/yum-config-manager ] 

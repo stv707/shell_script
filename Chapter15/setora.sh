@@ -13,7 +13,13 @@ podman run -d -it --name oracle-db-12c -p 8080:8080  -p 1521:1521 stv707/oradb:1
 
 #install clienttool - sqlplus
 
-if [ ! -f /etc/yum.repos.d/yum.ora* ] 
+if [ ! -f /usr/bin/yum-config-manager ] 
+then
+	yum install yum-config-manager -y &> /dev/null 
+fi 
+
+
+if [ ! -f /etc/yum.repos.d/yum.oracle.com_repo_OracleLinux_OL8_oracle_instantclient21_x86_64_.repo ] 
 then
 yum-config-manager --add-repo  https://yum.oracle.com/repo/OracleLinux/OL8/oracle/instantclient21/x86_64/  &> /dev/null 
 fi 

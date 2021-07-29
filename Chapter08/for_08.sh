@@ -1,5 +1,5 @@
 #!/bin/bash
-for filename in *.c
+for filename in *.sh
 do
 echo "Copying $filename to $filename.bak"
 cp $filename $filename.bak

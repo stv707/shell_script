@@ -12,10 +12,9 @@ fi
 podman run -d -it --name oracle-db-12c -p 8080:8080  -p 1521:1521 stv707/oradb:12slim
 
 #install clienttool - sqlplus
-
 if [ ! -f /usr/bin/yum-config-manager ] 
 then
-	yum install yum-config-manager -y &> /dev/null 
+	yum install yum-utils -y &> /dev/null 
 fi 
 
 
@@ -24,10 +23,10 @@ then
 yum-config-manager --add-repo  https://yum.oracle.com/repo/OracleLinux/OL8/oracle/instantclient21/x86_64/  &> /dev/null 
 fi 
 
-grep gpgcheck /etc/yum.repos.d/yum.ora &> /dev/null 
+grep gpgcheck /etc/yum.repos.d/yum.repos.d/yum.oracle.com_repo_OracleLinux_OL8_oracle_instantclient21_x86_64_.repo &> /dev/null 
 if [ $? -ne 0 ] 
 then 
-	echo "gpgcheck=0" >> /etc/yum.repos.d/yum.ora*
+	echo "gpgcheck=0" >> /etc/yum.repos.d/yum.repos.d/yum.oracle.com_repo_OracleLinux_OL8_oracle_instantclient21_x86_64_.repo
 fi 
 yum makecache &> /dev/null 
 

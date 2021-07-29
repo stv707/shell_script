@@ -40,3 +40,7 @@ fi
 
 podman run -d -it --rm  --name rsync-server  -p 8000:873 -p 9000:22 -e USERNAME=user -e PASSWORD=pass -e ALLOW="10.0.0.0/8 127.0.0.1/32" \
        	-v /dat/id_rsa.pub:/root/.ssh/authorized_keys axiom/rsync-server
+
+
+
+echo "podman login info:"

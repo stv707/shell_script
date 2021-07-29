@@ -72,5 +72,12 @@ INSERT INTO myphone VALUES(0, 'iphone', '7', 'white', 50);
 EOF
 
 echo "OraDB is fully ready...." 
+
+echo "##################################################################"
+echo 
 echo "login string: sqlplus  bob/Pa55word@localhost/ORCLPDB1.localdomain" 
+echo 
+echo "##################################################################"
+
+
 echo "login string: sqlplus  bob/Pa55word@localhost/ORCLPDB1.localdomain" > ora_login.txt 

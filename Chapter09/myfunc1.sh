@@ -6,7 +6,7 @@
 #Changelog: 
 
 # Lib Source
-source /usr/local/lib/shlib.sh 
+. /usr/local/lib/shlib.sh 
 
 ## main body ##
 

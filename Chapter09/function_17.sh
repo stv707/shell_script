@@ -1,10 +1,22 @@
 #!/bin/bash
+
+#Global Variable
+
+
+#Function 
+
 dobackup()
+
 {
-echo "Started backup"
-tar -zcvf /dev/st0 /home >/dev/null 2>& 1
-echo "Completed backup"
+sleep 20 
+#echo "Started backup"
+tar -cf ./home.tar /home >/dev/null 2>& 1
+#echo "Completed backup"
 }
+
+# main body 
+
 dobackup &
+
 echo -n "Task...done."
 echo

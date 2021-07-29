@@ -9,13 +9,34 @@
 
 ## main body ##
 
-podman run \
-    --name rsync-server \ 
-    -p 8000:873 \ 
-    -p 9000:2222 \ 
-    -e USERNAME=user \ 
-    -e PASSWORD=pass \ 
-    -v /your/public.key:/root/.ssh/authorized_keys \ 
-    axiom/rsync-server
+# Set POublic Key
 
 
+podman images | grep rsync &> /dev/null  
+if [ $? -ne 0 ] 
+then 
+	echo "rsync container not found"
+	wget $(cat url.txt) 
+	podman load < rsync.tar 
+	echo "rerun the script"
+	exit 33
+fi 
+
+
+if [ !  -d /dat ] 
+then
+mkdir /dat
+chmod 777 /dat/
+fi 
+
+if [ -f /root/.ssh/id_rsa.pub ] 
+then
+cp /root/.ssh/id_rsa.pub /dat/
+else 
+	echo "pub key not found - exit"
+	exit 22
+fi 
+
+
+podman run -d -it --rm  --name rsync-server  -p 8000:873 -p 9000:22 -e USERNAME=user -e PASSWORD=pass -e ALLOW="10.0.0.0/8 127.0.0.1/32" \
+       	-v /dat/id_rsa.pub:/root/.ssh/authorized_keys axiom/rsync-server

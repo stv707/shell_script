@@ -1,0 +1,6 @@
+Product   Quantity   Unit_Price   Total_Cost
+APPLE 	     2		3	      6
+ORANGE 	     2          .8            1.6
+PAPAYA       2          1.5           3
+CHICKEN      3          5             15
+CASHEW       1          10            10

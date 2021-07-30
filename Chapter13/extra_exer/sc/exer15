@@ -1,0 +1,23 @@
+BEGIN { OFS = "\t" }
+BEGIN { print "NAME          AVERAGE GRADE" } 
+
+	# action applied to all input lines
+	{
+		# add up the grades
+		total = 0
+		for (i = 3; i <= NF; ++i)
+			total += $i
+
+		# calculate average
+		avg = total / (NF - 2)
+
+		# determine letter grade
+		if (avg >= 90) grade="A"
+		else if (avg >= 80) grade="B"
+		else if (avg >= 70) grade="C"
+		else if (avg >= 60) grade="D"
+		else grade="F"
+
+		# print student name, average, and letter grade
+		print $1 " " $2, avg, grade
+	}

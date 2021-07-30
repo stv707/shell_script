@@ -1,11 +1,11 @@
 From: Program committee <pc@event.org>
-To: {firstname} {lastname} <{email}>
+To: Harry Potter <hpotter@hogwarts.edu>
 Subject: Your presentation proposal
 
-Dear {firstname} {lastname},
+Dear Harry Potter,
 
 Thank you for your presentation proposal:
-  {title}
+  "Defeating your nemesis in 3 easy steps"
 
 We are pleased to inform you that your proposal has been successful! We
 will contact you shortly with further information about the event

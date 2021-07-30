@@ -1,0 +1,24 @@
+BEGIN { OFS = "\t" }
+BEGIN { print "NAME          AVERAGE GRADE" } 
+
+	# action applied to all input lines
+	{
+		# add up the grades
+		total = 0
+		for (i = 3; i <= NF; ++i)
+			total += $i
+		# calculate average
+		avg = total / (NF - 2)
+		# assign student's average to element of array
+		#class_avg[NR] = avg
+		# determine letter grade
+		if (avg >= 90) grade="A"
+		else if (avg >= 80) grade="B"
+		else if (avg >= 70) grade="C"
+		else if (avg >= 60) grade="D"
+		else grade="F"
+		# increment counter for letter grade array
+		#++class_grade[grade]
+		# print student name, average, and letter grade
+		print $1 " " $2, avg, grade
+	}

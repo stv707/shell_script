@@ -1,11 +1,14 @@
 #!/bin/bash
 result="output.txt"
->$ $result # Create empty file
+#>$ $result # Create empty file
 dialog --title "Inputbox Demo" \
 --backtitle "Learn Shell Scripting" \
 --inputbox "Please enter your name " 8 60 2>$result
+
 response=$?
 name=$(<$result)
+
+
 case $response in
 0) echo "Hello $name"
 ;;
@@ -13,4 +16,4 @@ case $response in
 ;;
 255) echo "Escape key pressed."
 esac
-rm $result
+#rm $result

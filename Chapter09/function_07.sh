@@ -1,12 +1,17 @@
 #!/bin/bash
 quit()
 {
-exit
+	exit
 }
+
+
 ex()
 {
-echo $1 $2 $3
+	echo $1 $2 $3
 }
+
+
+
 ex Hello hi bye # Function ex with three arguments
 ex World # Function ex with one argument
 echo $1 # First argument passed to script

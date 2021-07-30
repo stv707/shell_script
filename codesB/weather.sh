@@ -24,3 +24,5 @@ case $1 in
 	curl https://wttr.in
 	;;
 esac
+
+#$=v2

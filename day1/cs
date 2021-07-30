@@ -1,0 +1,33 @@
+#!/bin/bash 
+
+
+
+if [ $# -ne 2 ] 
+ then 
+  echo "Usage: $0  <Usage _text>  <script_name>" 
+  echo "Usage text must be enclosed in quote"
+  exit 22
+fi 
+
+
+function header () 
+{ 
+cat <<EOF
+#!/bin/bash
+#Author: Steven
+#Date: $DD
+#Usage: $USA
+#Version: 1.0 
+#Changelog: 
+EOF
+} 
+
+DD=$(date +%d-%B-%Y) 
+USA=$1
+
+
+touch  $2 
+header > $2
+chmod +x $2
+vim  $2
+#v2

@@ -1,0 +1,46 @@
+#!/bin/bash
+#Author: Steven
+#Date: 29-July-2021
+#Usage: loop_forever
+#Version: 1.0 
+#Changelog: 
+
+# Lib Source
+source /usr/local/lib/shlib.sh 
+
+## main body ##
+function start() 
+{ 
+
+if [ -f /tmp/myapp.log ]
+then
+	rm /tmp/myapp.log 
+fi 
+
+while true 
+do
+	echo "date log: $(date)" >> /tmp/myapp.log
+	sleep 5 
+done
+} 
+
+function stop() 
+{ 
+	PID=$(cat /run/myapp.pid) 
+	kill -9 $PID
+
+	sleep 5 
+	rm /run/myapp.pid 
+	rm /tmp/myapp.log
+
+}
+
+case $1 in 
+
+	start)  "$1" &  echo "$!" > /run/myapp.pid
+		;; 
+
+	stop) "$1" 
+		;; 
+
+esac 

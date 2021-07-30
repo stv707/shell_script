@@ -1,6 +1,11 @@
 #!/bin/bash
+
+
 USAGE="usage: $0 -x -y"
+
+
 while getopts :xy: opt_char
+
 do
 	case $opt_char in
 	x)

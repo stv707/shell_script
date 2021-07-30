@@ -1,6 +1,7 @@
 #!/bin/bash
+. ora_
 
-sqlplus user1/Test123 <<MY_QUERY
+$ORA <<MY_QUERY
 set serveroutput on;
 INSERT INTO Writers VALUES(101, 'ABCD');
 INSERT INTO Writers VALUES(102, 'EFGH');

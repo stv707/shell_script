@@ -1,0 +1,1 @@
+login string: mysql -uroot -pPa55word1234 -h 127.0.0.1 -P 3306

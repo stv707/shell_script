@@ -3,6 +3,15 @@
 pause()
 {
 echo "To continue, hit RETURN."
-read q
+read
 }
+
+
+
+
+echo "Hello, how are you."
 pause
+echo "Today is Thur"
+pause
+
+

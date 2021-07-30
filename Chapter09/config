@@ -1,0 +1,34 @@
+#Host DUMMY #Berlin#
+
+Host bserver1 #First server
+HostName localhost
+
+Host bserver2 #Second server
+HostName localhost
+
+Host bserver3 #Third server
+HostName localhost
+
+#Host DUMMY #Dubai#
+
+Host dserver1 #First server
+HostName localhost
+
+Host dserver2 #Second server
+HostName localhost
+
+Host dserver3 #Third server
+HostName localhost
+
+#Host DUMMY #Malaysia#
+
+Host myserver1 #First server
+HostName localhost
+
+Host myserver2 #Second server
+HostName localhost
+
+Host myserver3 #Third server
+HostName localhost
+
+

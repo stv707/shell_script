@@ -1,6 +1,10 @@
 #!/bin/bash
 
-mysql -u user1 -pTest623@! <<MY_QUERY
+
+
+. mysql_
+
+$LOGMYSQL <<MY_QUERY
 use testdb;
 
 ALTER TABLE Authors

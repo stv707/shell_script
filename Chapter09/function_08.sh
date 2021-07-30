@@ -11,6 +11,10 @@ echo "countries(): all arguments (\$*) passed = -\"$*\""
 # Call function with one argument
 echo "Calling countries() for first time"
 countries USA
+
+
+
+
 # Call function with three arguments
 echo "Calling countries() second time "
 countries USA India Japan

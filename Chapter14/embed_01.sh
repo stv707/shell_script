@@ -1,12 +1,17 @@
 #!/bin/bash
+
+
 function now_date_time
 {
-python - <<START
+python3 - <<START
 import datetime
 value = datetime.datetime.now()
 print (value)
 START
 } 
+
+
+
 
 now_date_time
 

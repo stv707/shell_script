@@ -21,3 +21,4 @@ BEGIN { print "NAME          AVERAGE GRADE" }
 		# print student name, average, and letter grade
 		print $1 " " $2, avg, grade
 	}
+END{print "End  of REPORT"} 

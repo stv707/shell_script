@@ -1,4 +1,7 @@
 #!/bin/bash
+
+
+
 . mysql_
 
 $LOGMYSQL <<MY_QUERY

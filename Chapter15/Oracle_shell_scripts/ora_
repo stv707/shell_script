@@ -1,0 +1,1 @@
+ORA="sqlplus  bob/Pa55word@localhost/ORCLPDB1.localdomain" 

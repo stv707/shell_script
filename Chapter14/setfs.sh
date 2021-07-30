@@ -43,4 +43,4 @@ podman run -d -it --rm  --name rsync-server  -p 8000:873 -p 9000:22 -e USERNAME=
 
 
 
-echo "podman login info: rsync -av -e "ssh -i /root/.ssh/id_rsa -p 9000 -l root" /your/folder/ localhost:/data  "
+echo "podman login info: rsync -av -e "ssh -i /root/.ssh/id_rsa -p 9000 -l root" /your/folder/ localhost:/data"

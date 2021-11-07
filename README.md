@@ -2,17 +2,37 @@
 
 ### Setup 
 
-1. Get Rocky Linux Image for VM ( Vmware or Virtual Box )
-2. Install and configure
-    1. Disable SElinux
-    2. Disable Firewall ( Saves time )
-3. podman pull 
-    1. mysql:5.7
-    2. rsync-server:latest
-    3. oracle 12c ( stv707/oracle:12slim)
-4. Clone this repo 
-5. System ready for Training Delivery
-6. Book can be downloaded at databin ( will be available during the training session )
+1. Access https://teleport.cognitoz.com/web/login  ( username + Password will be provided )
+
+2. Access Shell / or VNC 
+
+3. Verify SElinux and Firewall are disabled 
+    ```sh
+    firewall-cmd --list-all 
+    FirewallD is not running
+
+    sestatus
+    SELinux status: disabled
+    ```
+4. Verify podman container images available 
+    ```sh 
+    podman images 
+
+    REPOSITORY                     TAG      IMAGE ID       CREATED        SIZE
+    docker.io/library/mysql        5.7      938b57d64674   2 weeks ago    454 MB
+    docker.io/axiom/rsync-server   latest   7540e3def2fd   9 months ago   164 MB
+    quay.io/stv707/oradb           12slim   27c9559d36ec   4 years ago    2.1 GB
+    ```
+
+5. Clone this repo 
+   ```sh
+   cd ~
+   git clone https://github.com/stv707/shell_script.git 
+
+   ```
+6. System ready for Training Delivery
+
+7. Book can be downloaded at databin [ https://databin.cognitoz.com/s/b2b7GjnQFfVficU ]
 
 
 - Assets used for Shell Script training

@@ -43,5 +43,5 @@
 7. EBook can be downloaded at Cognitoz databin [ https://databin.cognitoz.com/s/b2b7GjnQFfVficU ]
 
 
-- Assets used for Shell Script training
+- Assets used for DHL Custom Shell Script training
 - smahalin@redhat.com

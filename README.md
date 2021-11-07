@@ -6,8 +6,11 @@
 
 2. Access Shell / or VNC for GUI 
 
+   * Shell Access 
    ![picture 1](images/c48b60ac63cc7148a35a7d7486466cf93fef9bfc25983330c625b3a4a8545a6d.png)  
 
+
+   * VNC Desktop Access
    ![picture 2](images/ff6b555886f6cdd6adf35b7e7066ad8a8b3a459da0fea68e3d469c01527bdd85.png)  
 
 

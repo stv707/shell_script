@@ -2,7 +2,7 @@
 
 ### Setup 
 
-1. Access https://teleport.cognitoz.com/web/login  ( username  will be provided )
+1. Access teleport server   ( link  will be provided )
 
 2. Access Shell / or VNC for GUI 
 
@@ -14,7 +14,7 @@
    ![picture 2](images/ff6b555886f6cdd6adf35b7e7066ad8a8b3a459da0fea68e3d469c01527bdd85.png)  
 
 
-3. Verify SElinux and Firewall are disabled 
+3. Verify SElinux and Firewall are disabled ( open terminal )
     ```sh
     # firewall-cmd --list-all 
       FirewallD is not running

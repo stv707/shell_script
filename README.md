@@ -2,9 +2,14 @@
 
 ### Setup 
 
-1. Access https://teleport.cognitoz.com/web/login  ( username + Password will be provided )
+1. Access https://teleport.cognitoz.com/web/login  ( username  will be provided )
 
-2. Access Shell / or VNC 
+2. Access Shell / or VNC for GUI 
+
+   ![picture 1](images/c48b60ac63cc7148a35a7d7486466cf93fef9bfc25983330c625b3a4a8545a6d.png)  
+
+   ![picture 2](images/ff6b555886f6cdd6adf35b7e7066ad8a8b3a459da0fea68e3d469c01527bdd85.png)  
+
 
 3. Verify SElinux and Firewall are disabled 
     ```sh

@@ -26,7 +26,7 @@ fi
 grep gpgcheck /etc/yum.repos.d/yum.oracle.com_repo_OracleLinux_OL8_oracle_instantclient21_x86_64_.repo &> /dev/null 
 if [ $? -ne 0 ] 
 then 
-	echo "gpgcheck=0" >> /etc/yum.repos.d/yum.repos.d/yum.oracle.com_repo_OracleLinux_OL8_oracle_instantclient21_x86_64_.repo
+	echo "gpgcheck=0" >> /etc/yum.repos.d/yum.oracle.com_repo_OracleLinux_OL8_oracle_instantclient21_x86_64_.repo
 fi 
 yum makecache &> /dev/null 
 
